@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cartão de Crédito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card-container">
+      <div class="front">
+        <div class="imagens">  
+        <div class="chip">
+              <img class="chip" src="https://raw.githubusercontent.com/jovenan/Credit-card-form-ui/main/img/chip.png" alt="chip">
+          </div>
+          <div class="bandeira">
+          <img class="bandeira" src="https://mtf.mastercard.co.za/content/dam/public/mastercardcom/mea/za/logos/mc-logo-52.svg
+          " alt="bandeira-mastercard">
+          </div>
+        </div>
+          <div class="card-number-box">################</div>
+          <div class="flexbox">
+              <div class="box">
+                  <span>TITULAR DO CARTÃO</span>
+                  <div class="card-holder-name">Nome Completo</div>
+              </div>
+              <div class="box">
+                  <span>Validade</span>
+                  <div class="expiration">
+                      <span class="exp-month">mm</span>
+                      <span class="exp-year">yy</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+      <div class="back">
+          <div class="stripe"></div>
+          <div class="box">
+              <span>cvv</span>
+              <div class="cvv-box"></div>
+              <img src="https://github.com/jovenan/Credit-card-form-ui/blob/main/img/aprox.png?raw=true" alt="">
+          </div>
+      </div>
+  </div>
+      <form>
+        <div class="input-box">
+          <span>Numero do cartão</span>
+          <input type="text" maxlength="19" id="cardNumberInput" placeholder="1234 5678 9101 1121">
+        </div>
+        <div class="input-box">
+          <span>Titular do cartão</span>
+          <input type="text" maxlength="30" id="nameInput" placeholder="SANTIAGO NOGUEIRA">
+        </div>
+        <div class="flexbox">
+        <div class="input-box">
+          <span>Vencimento</span>
+          <input type="text" maxlength="5" id="vencimento" placeholder="07/24">
+        </div>
+        <div class="input-box">
+          <span>CVC</span>
+          <input type="text" maxlength="3" id="CVCInput" placeholder="123">
+        </div>
+      </div>
+        <div class="btn">
+        <a href="#" class="my-button" id="submitBtn">Enviar</a>
+        <a href="#" class="bn11" onclick="toggleDarkMode()">DarkMode</a>  
+        <a href="#" class="bn11" onclick="toggleLightMode()">LightMode</a>
+      </div>
+      </form>   
+      <script src="script.js"></script>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=PT+Sans+Narrow&family=Poppins:wght@100&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #514d4d;
+
+  }
+ 
+  .container{
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+    padding-top: 100px;
+    padding: 20px;
+  }
+  .container .card-container{
+    display: flex;
+    position: relative;
+    margin-bottom: 70px;
+    margin-right: 40px;
+    height: 250px;
+    width: 400px;
+  }
+  .container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(31, 143, 255);
+    border-radius: 5px;
+    box-shadow: 6px 6px 0px #000;
+    padding: 20px;
+    transition:transform .4s ease-out
+  }
+  .container .card-container .imagens{
+    display: flex;
+    
+  }
+
+  .container .card-container .front .chip{
+    height: 100px;
+    width: 100px;
+  } 
+  .container .card-container .front .bandeira{
+     margin-left: 80px;
+     margin-top: 3px;
+     height: 100px;
+     width: 130px;
+  }
+
+  
+  .container .card-container .front .card-number-box{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px; 
+    margin-top: 25px;
+  }
+
+  .container .card-container .front .flexbox{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .container .card-container .front .flexbox .box:nth-child(1){
+    font-size: 20px;
+    color: #fff;
+    padding: 5px; 
+    margin-top: 5px;
+  }
+  
+  .container .card-container .front .flexbox .box{
+    font-size: 20px;
+    color: #fff;
+    padding: 5px; 
+    margin-top: 5px;  
+  }
+
+  .container .card-container .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 250px;
+    width: 440px;
+    background:linear-gradient(rgb(177, 27, 225) 50%, rgb(31, 143, 255) 50%);
+    border-radius: 5px;
+    padding: 20px 0 ;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: rgb(0, 0, 0) 0px 1px 0px 3px;
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+  }
+
+  
+  .container form{
+    background: #081D3C;
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 0) 0px 1px 0px 3px;
+    height: 350px;
+    width: 500px;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  .container form .input-box{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #fff;
+  }
+  .container form .flexbox{
+    display: flex;
+  }
+  input{
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #333333;
+  }
+  .btn{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .bn11 {
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: #3f04ff;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: -2px 0em 0em #000;
+    transition: all 0.2s;    
+  }
+  
+  a.bn11:hover {
+    border-color: rgb(255, 255, 255);
+  }
+  .my-button{
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: #3f04ff;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-shadow: -2px 0em 0em #000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    top: 0;
+    left: 0;
+  }
+  .my-button:hover{
+    border-color: rgb(255, 255, 255);
+  }
+  .light-mode {
+    background-color: #95b67f;
+  }
+  .light-mode .container form {
+    background: #7f8fff;
+    box-shadow: rgb(255, 255, 255) 0px 1px 0px 3px;
+  }
+  .light-mode .container form .input-box{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+  }
+  .light-mode input {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .dark-mode {
+    background-color: #514d4d;
+    color: #ffffff;
+  }
+  
+  .dark-mode .container form {
+    background: #081D3C;
+    color: #ffffff;
+  }
+  
+  .dark-mode input {
+    background-color: #333333;
+    color: #ffffff;
+  }
