@@ -1,4 +1,14 @@
-window.onload = function() {
+function toggleDarkMode() {
+  document.body.classList.add('dark-mode')
+  document.body.classList.remove('light-mode')
+}
+function toggleLightMode(){
+  document.body.classList.add('light-mode')
+  document.body.classList.remove('dark-mode')
+}
+
+
+onload = function() {
   const cardNumber = document.getElementById('cardNumberInput')
   const name = document.getElementById('nameInput')
   const exp = document.getElementById('vencimento')
@@ -29,18 +39,19 @@ window.onload = function() {
       document.querySelector('.exp-year').innerText = exp.value.slice(3)
     }
   })
-
-  cvc.addEventListener('input',function(){
-    if (cvc.value.length === 0) {
-      document.querySelector('.cvv-box').innerText = 'cvc'
-    } else {
-      document.querySelector('.CVCInput').onmouseenter = () =>{
-        document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)'
-        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)'
-
-      }
-    }
+  cvc.addEventListener('input', function() {
+    document.querySelector('.cvv-box').innerText = cvc.value;
   })
+
+  cvc.addEventListener('mouseenter', function() {
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+  })
+  cvc.addEventListener('mouseleave', function() {
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(-180deg)';
+  })
+
 
   document.getElementById('submitBtn').addEventListener('click', function() {
     submitForm()
