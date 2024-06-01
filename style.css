@@ -32,7 +32,9 @@ body{
     border-radius: 5px;
     box-shadow: 6px 6px 0px #000;
     padding: 20px;
-    transition:transform .4s ease-out
+    transition:transform .7s ease-out;
+    transform: perspective(1000px) rotateY(0deg);
+
   }
   .container .card-container .imagens{
     display: flex;
@@ -91,6 +93,7 @@ body{
     padding: 20px 0;
     text-align: right;
     backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(-180deg);
     box-shadow: 6px 6px 0px #000;
    
 }
